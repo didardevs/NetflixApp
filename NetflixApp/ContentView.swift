@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     init() {
         UITabBar.appearance().isTranslucent = false
         UITabBar.appearance().barTintColor = UIColor.black
@@ -22,22 +23,22 @@ struct ContentView: View {
                     Text("Home")
                 }.tag(0)
             
-            Text("Search")
+            SearchView()
                 .tabItem {
                     Image(systemName: "magnifyingglass")
-                    Text("2")
+                    Text("Search")
                 }.tag(1)
             
-            Text("Coming Soon")
+            ComingSoon()
                 .tabItem {
                     Image(systemName: "play.rectangle")
-                    Text("2")
+                    Text("Coming Soon")
                 }.tag(2)
             
-            Text("Downloads")
+            DownloadsView()
                 .tabItem {
                     Image(systemName: "arrow.down.to.line.alt")
-                    Text("2")
+                    Text("Downloads")
                 }.tag(3)
             
             Text("More")

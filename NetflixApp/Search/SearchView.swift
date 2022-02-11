@@ -9,13 +9,10 @@ import SwiftUI
 
 struct SearchView: View {
     @ObservedObject var vm = SearchVM()
-    
     @State private var searchText = ""
-    
     @State private var movieDetailToShow: Movie? = nil
     
     var body: some View {
-        
         let searchTextBinding = Binding {
             return searchText
         } set: {

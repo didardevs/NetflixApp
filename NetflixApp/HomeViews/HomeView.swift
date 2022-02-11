@@ -20,6 +20,10 @@ struct HomeView: View {
     
     @State private var showGenreSelection = false
     @State private var showTopRowSelection = false
+    @State private var showDetail = false
+    
+    @Binding var showPreviewFullscreen: Bool
+    @Binding var previewStartingIndex: Int
     
     var body: some View {
         ZStack {
@@ -37,13 +41,19 @@ struct HomeView: View {
                         .padding(.top, -110)
                         .zIndex(-1)
                     
-                    HomeStack(vm: vm, topRowSelection: topRowSelection, selectedGenre: homeGenre, movieDetailToShow: $movieDetailToShow)
+                    MoviePreviewRow(
+                        movies: exampleMovies,
+                        showPreviewFullscreen: $showPreviewFullscreen,
+                        previewStartingIndex: $previewStartingIndex
+                    )
+                    HomeStack(vm: vm, topRowSelection: topRowSelection, selectedGenre: homeGenre, movieDetailToShow: $movieDetailToShow, showPreviewFullscreen: $showPreviewFullscreen,
+                              previewStartingIndex: $previewStartingIndex)
                 }
             }
             
             if movieDetailToShow != nil {
                 MovieDetail(movie: movieDetailToShow!, movieDetailToShow: $movieDetailToShow)
-                    .animation(.easeIn)
+                    .animation(.spring(), value: showDetail)
                     .transition(.opacity)
             }
             
@@ -135,7 +145,7 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView(showPreviewFullscreen: .constant(false), previewStartingIndex: .constant(0))
     }
 }
 

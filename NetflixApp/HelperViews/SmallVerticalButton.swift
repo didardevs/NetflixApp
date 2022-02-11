@@ -11,12 +11,15 @@ struct SmallVerticalButton: View {
     var text: String
     var isOnImage: String
     var isOffImage: String
+    var color: Color = Color.white
     var isOn: Bool
+    
     var imageName: String {
         if isOn {
             return isOnImage
+        } else {
+            return isOffImage
         }
-        return isOffImage
     }
     var action: () -> Void
     
@@ -24,11 +27,12 @@ struct SmallVerticalButton: View {
         Button(action: {
             action()
         }, label: {
-            VStack{
+            VStack {
                 Image(systemName: imageName)
-                    .foregroundColor(.white)
+                    .foregroundColor(color)
+                
                 Text(text)
-                    .foregroundColor(.white)
+                    .foregroundColor(color)
                     .font(.system(size: 14))
                     .bold()
             }
@@ -38,13 +42,17 @@ struct SmallVerticalButton: View {
 
 struct SmallVerticalButton_Previews: PreviewProvider {
     static var previews: some View {
+        
         ZStack {
             Color.black
                 .edgesIgnoringSafeArea(.all)
-            SmallVerticalButton(text: "My List", isOnImage: "checkmark", isOffImage: "plus", isOn: true) {
-                print("tapped")
-            }
             
+            SmallVerticalButton(text: "My List",
+                                isOnImage: "checkmark",
+                                isOffImage: "plus",
+                                isOn: true) {
+            }
         }
+        
     }
 }

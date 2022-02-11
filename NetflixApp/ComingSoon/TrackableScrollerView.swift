@@ -13,7 +13,7 @@ struct TrackableScrollView<Content>: View where Content: View {
     let showIndicators: Bool
     @Binding var contentOffset: CGFloat
     let content: Content
- 
+    
     init(_ axes: Axis.Set = .vertical, showIndicators: Bool = true, contentOffset: Binding<CGFloat>, @ViewBuilder content: () -> Content) {
         self.axes = axes
         self.showIndicators = showIndicators

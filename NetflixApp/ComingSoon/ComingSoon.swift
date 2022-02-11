@@ -73,8 +73,6 @@ struct ComingSoon: View {
                         })
                 }
             }
-        
-        //        }
     }
 }
 

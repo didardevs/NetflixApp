@@ -40,7 +40,6 @@ struct TopMoviePreview: View {
                                     .foregroundColor(.blue)
                                     .font(.system(size: 3))
                             }
-                            
                         }
                     }
                 }

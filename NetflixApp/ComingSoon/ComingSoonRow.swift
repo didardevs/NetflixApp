@@ -9,7 +9,6 @@ import SwiftUI
 import Kingfisher
 import AVKit
 
-
 struct ComingSoonRow: View {
     var movie: Movie
     @Binding var movieDetailToShow: Movie?

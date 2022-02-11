@@ -8,8 +8,6 @@
 import Foundation
 
 class HomeVM: ObservableObject {
-    
-    // String == Category
     @Published var movies: [String: [Movie]] = [:]
     
     public var allCategories: [String] {
@@ -44,6 +42,4 @@ class HomeVM: ObservableObject {
         movies["Watch It Again"] = exampleMovies.shuffled()
         movies["Sci-Fi Movies"] = exampleMovies.shuffled()
     }
-    
 }
-

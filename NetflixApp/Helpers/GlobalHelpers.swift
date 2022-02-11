@@ -7,7 +7,8 @@
 
 import Foundation
 import SwiftUI
-let exampleVideoURL = URL(string: "https://www.radiantmediaplayer.com/media/big-buck-bunny-360.mp4")!
+
+let exampleVideoURL = URL(string: "https://www.rmp-streaming.com/media/big-buck-bunny-360p.mp4")!
 let exampleImageURL = URL(string: "https://picsum.photos/300/104")!
 let exampleImageURL1 = URL(string: "https://picsum.photos/300/105")!
 let exampleImageURL2 = URL(string: "https://picsum.photos/300/106")!
@@ -21,48 +22,48 @@ var randomExampleImageURL: URL {
 let exampleTrailers = [exampleTrailer1, exampleTrailer2, exampleTrailer3]
 
 let episode1 = Episode(name: "Beginnings and Endings",
-                         season: 1,
-                         episodeNumber: 1,
+                       season: 1,
+                       episodeNumber: 1,
                        thubnailImageURLString: "https://picsum.photos/300/112",
-                         description: "Six months after the disappearances, the police form a task force. In 2052, Jonas learns that most of Winden perished in an apocalyptic event.",
-                         length: 53,
-                         videoURL: exampleVideoURL)
+                       description: "Six months after the disappearances, the police form a task force. In 2052, Jonas learns that most of Winden perished in an apocalyptic event.",
+                       length: 53,
+                       videoURL: exampleVideoURL)
 let episode2 = Episode(name: "Dark Matter",
-                         season: 1,
-                         episodeNumber: 2,
+                       season: 1,
+                       episodeNumber: 2,
                        thubnailImageURLString: "https://picsum.photos/300/111",
-                         description: "Clausen and Charlotte interview Regina. The Stranger takes Hannah to 1987, where Claudia has an unnerving encounter and Egon visits an old nemesis.",
-                         length: 54,
-                         videoURL: exampleVideoURL)
+                       description: "Clausen and Charlotte interview Regina. The Stranger takes Hannah to 1987, where Claudia has an unnerving encounter and Egon visits an old nemesis.",
+                       length: 54,
+                       videoURL: exampleVideoURL)
 let episode3 = Episode(name: "Ghosts",
-                         season: 1,
-                         episodeNumber: 3,
+                       season: 1,
+                       episodeNumber: 3,
                        thubnailImageURLString: "https://picsum.photos/300/110",
-                         description: "In 1954, a missing Helge returns, but he'll only speak to Noah. In 1987, Claudia brings the time machine to Tannhaus, and Egon questions Ulrich again.",
-                         length: 56,
-                         videoURL: exampleVideoURL)
+                       description: "In 1954, a missing Helge returns, but he'll only speak to Noah. In 1987, Claudia brings the time machine to Tannhaus, and Egon questions Ulrich again.",
+                       length: 56,
+                       videoURL: exampleVideoURL)
 
 let episode4 = Episode(name: "Beginnings and Endings",
-                         season: 2,
-                         episodeNumber: 1,
+                       season: 2,
+                       episodeNumber: 1,
                        thubnailImageURLString: "https://picsum.photos/300/109",
-                         description: "Six months after the disappearances, the police form a task force. In 2052, Jonas learns that most of Winden perished in an apocalyptic event.",
-                         length: 53,
-                         videoURL: exampleVideoURL)
+                       description: "Six months after the disappearances, the police form a task force. In 2052, Jonas learns that most of Winden perished in an apocalyptic event.",
+                       length: 53,
+                       videoURL: exampleVideoURL)
 let episode5 = Episode(name: "Dark Matter",
-                         season: 2,
-                         episodeNumber: 2,
+                       season: 2,
+                       episodeNumber: 2,
                        thubnailImageURLString: "https://picsum.photos/300/108",
-                         description: "Clausen and Charlotte interview Regina. The Stranger takes Hannah to 1987, where Claudia has an unnerving encounter and Egon visits an old nemesis.",
-                         length: 54,
-                         videoURL: exampleVideoURL)
+                       description: "Clausen and Charlotte interview Regina. The Stranger takes Hannah to 1987, where Claudia has an unnerving encounter and Egon visits an old nemesis.",
+                       length: 54,
+                       videoURL: exampleVideoURL)
 let episode6 = Episode(name: "Ghosts",
-                         season: 2,
-                         episodeNumber: 3,
+                       season: 2,
+                       episodeNumber: 3,
                        thubnailImageURLString: "https://picsum.photos/300/107",
-                         description: "In 1954, a missing Helge returns, but he'll only speak to Noah. In 1987, Claudia brings the time machine to Tannhaus, and Egon questions Ulrich again.",
-                         length: 56,
-                         videoURL: exampleVideoURL)
+                       description: "In 1954, a missing Helge returns, but he'll only speak to Noah. In 1987, Claudia brings the time machine to Tannhaus, and Egon questions Ulrich again.",
+                       length: 56,
+                       videoURL: exampleVideoURL)
 
 var allExampleEpisodes = [episode1, episode2, episode3, episode4, episode5, episode6]
 
@@ -75,11 +76,13 @@ let exampleMovie1 = Movie(
     year: 2020,
     rating: "TV-MA",
     numberOfSeasons: 3,
+    accentColor: Color.blue,
     defaultEpisodeInfo: exampleEpisode1,
     creators: "Baram bo Odan, Jantje Friese",
     cast: "Louis Hofmann · Jonas Kahnwald ; Karoline Eichhorn",
     moreLikeThisMovies: [exampleMovie7, exampleMovie2, exampleMovie3, exampleMovie4, exampleMovie5, exampleMovie6],
     trailers: exampleTrailers,
+    previewImageName: "arrestedDevPreview", previewVideoUrl: exampleVideoURL,
     episode: allExampleEpisodes)
 
 let exampleMovie2 = Movie(
@@ -93,7 +96,7 @@ let exampleMovie2 = Movie(
     defaultEpisodeInfo: exampleEpisode1,
     creators: "Baram bo Odan, Jantje Friese",
     cast: "Louis Hofmann · Jonas Kahnwald ; Karoline Eichhorn",
-    moreLikeThisMovies: [], trailers: exampleTrailers, promotionHeadLine: "New Episode coming soon")
+    moreLikeThisMovies: [], trailers: exampleTrailers, previewImageName: "darkPreview", previewVideoUrl: exampleVideoURL, promotionHeadLine: "New Episode coming soon")
 
 let exampleMovie3 = Movie(
     id: UUID().uuidString,
@@ -106,7 +109,7 @@ let exampleMovie3 = Movie(
     defaultEpisodeInfo: exampleEpisode1,
     creators: "Baram bo Odan, Jantje Friese",
     cast: "Louis Hofmann · Jonas Kahnwald ; Karoline Eichhorn",
-    moreLikeThisMovies: [], trailers: exampleTrailers)
+    moreLikeThisMovies: [], trailers: exampleTrailers, previewImageName: "dirtyJohnPreview", previewVideoUrl: exampleVideoURL)
 
 let exampleMovie4 = Movie(
     id: UUID().uuidString,
@@ -119,7 +122,7 @@ let exampleMovie4 = Movie(
     defaultEpisodeInfo: exampleEpisode1,
     creators: "Baram bo Odan, Jantje Friese",
     cast: "Louis Hofmann · Jonas Kahnwald ; Karoline Eichhorn",
-    moreLikeThisMovies: [], trailers: exampleTrailers)
+    moreLikeThisMovies: [], trailers: exampleTrailers, previewImageName: "whiteLinesPreview", previewVideoUrl: exampleVideoURL)
 
 let exampleMovie5 = Movie(
     id: UUID().uuidString,
@@ -132,7 +135,7 @@ let exampleMovie5 = Movie(
     defaultEpisodeInfo: exampleEpisode1,
     creators: "Baram bo Odan, Jantje Friese",
     cast: "Louis Hofmann · Jonas Kahnwald ; Karoline Eichhorn",
-    moreLikeThisMovies: [], trailers: exampleTrailers)
+    moreLikeThisMovies: [], trailers: exampleTrailers, previewImageName: "travelersPreview", previewVideoUrl: exampleVideoURL)
 let exampleMovie6 = Movie(
     id: UUID().uuidString,
     name: "After Life",
@@ -144,7 +147,7 @@ let exampleMovie6 = Movie(
     defaultEpisodeInfo: exampleEpisode1,
     creators: "Baram bo Odan, Jantje Friese",
     cast: "Louis Hofmann · Jonas Kahnwald ; Karoline Eichhorn",
-    moreLikeThisMovies: [], trailers: exampleTrailers, promotionHeadLine: "Watch season 6 Now")
+    moreLikeThisMovies: [], trailers: exampleTrailers, previewImageName: "darkPreview", promotionHeadLine: "Watch season 6 Now")
 let exampleMovie7 = Movie(
     id: UUID().uuidString,
     name: "After Life",
@@ -156,7 +159,7 @@ let exampleMovie7 = Movie(
     defaultEpisodeInfo: exampleEpisode1,
     creators: "Baram bo Odan, Jantje Friese",
     cast: "Louis Hofmann · Jonas Kahnwald ; Karoline Eichhorn",
-    moreLikeThisMovies: [], trailers: exampleTrailers, promotionHeadLine: "Watch season 6 Now")
+    moreLikeThisMovies: [], trailers: exampleTrailers, previewImageName: "ozarkPrevie", previewVideoUrl: exampleVideoURL, promotionHeadLine: "Watch season 6 Now")
 
 var exampleMovies: [Movie] {
     return [exampleMovie1, exampleMovie2, exampleMovie3, exampleMovie4, exampleMovie5, exampleMovie6].shuffled()
@@ -184,5 +187,18 @@ extension String{
 extension View {
     func hideKeyboard() {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+}
+
+
+extension View {
+    @ViewBuilder func isHidden(_ hidden: Bool, remove: Bool = false) -> some View {
+        if hidden {
+            if !remove {
+                self.hidden()
+            }
+        } else {
+            self
+        }
     }
 }

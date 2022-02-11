@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CustomTabSwitcher: View {
     @State private var currentTab: CustomTab = .episodes
-
+    
     var tabs: [CustomTab]
     var movie: Movie
     
@@ -36,7 +36,7 @@ struct CustomTabSwitcher: View {
                                 Text(tab.rawValue)
                                     .font(.system(size: 16, weight: .bold))
                                     .foregroundColor(tab == currentTab ? Color.white : Color.gray)
-
+                                
                             })
                                 .buttonStyle(PlainButtonStyle())
                                 .frame(width: widthForTab(tab), height: 30)

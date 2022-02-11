@@ -32,7 +32,7 @@ struct SearchBar: View {
                     .onTapGesture(perform: {
                         isEditing = true
                     })
-
+                
                 if !text.isEmpty{
                     
                     
@@ -73,7 +73,7 @@ struct SearchBar: View {
                     })
                         .padding(.trailing, 10)
                         .transition(.move(edge: .trailing))
-
+                    
                     
                 }
             }
@@ -90,6 +90,6 @@ struct SearchBar_Previews: PreviewProvider {
                 .padding()
             
         }
-       
+        
     }
 }
